@@ -1,0 +1,15 @@
+{
+  "item.mccourse.citrine": "Citrine",
+  "item.mccourse.raw_citrine": "Raw Citrine",
+  "item.mccourse.coal_silver": "Coal Siver",
+  "item.mccourse.chipped_citrine": "Chipped Citrine",
+
+
+  "block.mccourse.citrine_block": "Citrine Block",
+  "block.mccourse.citrine_ore": "Citrine Ore",
+  "block.mccourse.deepslate_citrine_ore": "DeepSlate Citrine Ore",
+  "block.mccourse.endstone_citrine_ore": "EndStone Citrine Ore",
+
+
+  "itemGroup.coursemodtab": "MCCourse Mod"
+}

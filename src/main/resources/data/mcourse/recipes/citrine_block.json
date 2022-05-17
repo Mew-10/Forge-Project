@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mccourse:citrine"
+    },
+
+  },
+  "result": {
+    "item": "mccourse:citrine_block"
+  }
+}
