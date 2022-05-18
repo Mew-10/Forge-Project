@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mccourse:item/citrine"
+    "layer0": "mccourse:item/gem_cutter_tool"
   }
 }

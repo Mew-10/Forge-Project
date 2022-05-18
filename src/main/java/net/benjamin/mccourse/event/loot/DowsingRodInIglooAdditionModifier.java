@@ -1,4 +1,4 @@
-package net.kaupenjoe.mccourse.event.loot;
+package net.benjamin.mccourse.event.loot;
 
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;

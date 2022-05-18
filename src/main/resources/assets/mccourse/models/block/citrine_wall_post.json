@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_post",
   "textures": {
-    "wall": "tutorialmod:block/citrine_block"
+    "wall": "mccourse:block/citrine_block"
   }
 }

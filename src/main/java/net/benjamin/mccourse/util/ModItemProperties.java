@@ -1,2 +1,13 @@
-package net.benjamin.mccourse.util;public class ModItemProperties {
+package net.benjamin.mccourse.util;
+import net.benjamin.mccourse.MCCourseMod;
+import net.benjamin.mccourse.item.Moditems;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
+
+public class ModItemProperties {
+    public static void addCustomItemProperties() {
+        ItemProperties.register(Moditems.DATA_TABLET.get(), new ResourceLocation(MCCourseMod.MOD_ID, "on"),
+                ((pStack, pLevel, pEntity, pSeed) -> pStack.hasTag() ? 1f : 0f));
+
+    }
 }

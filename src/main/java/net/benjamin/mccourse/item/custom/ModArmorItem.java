@@ -1,7 +1,7 @@
-package net.kaupenjoe.tutorialmod.item.custom;
+package net.benjamin.mccourse.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
+import net.benjamin.mccourse.item.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;

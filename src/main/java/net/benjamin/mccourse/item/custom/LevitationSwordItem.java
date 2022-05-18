@@ -1,4 +1,4 @@
-package net.kaupenjoe.mccourse.item.custom;
+package net.benjamin.mccourse.item.custom;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

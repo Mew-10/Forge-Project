@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tutorialmod:item/citrine_sword"
+    "layer0": "mccourse:item/citrine_sword"
   }
 }

@@ -1,9 +1,12 @@
 package net.benjamin.mccourse.item;
 
 import net.benjamin.mccourse.MCCourseMod;
-import net.benjamin.mccourse.item.custom.CoalSilverItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.fluid.ModFluids;
+import net.benjamin.mccourse.item.custom.*;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +27,98 @@ public class Moditems {
 
     public static final RegistryObject<Item> CHIPPED_CITRINE = ITEMS.register("chipped_citrine",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+
+    public static final RegistryObject<Item> CITRINE_SWORD = ITEMS.register("citrine_sword",
+            () -> new LevitationSwordItem(ModTiers.CITRINE, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_PICKAXE = ITEMS.register("citrine_pickaxe",
+            () -> new PickaxeItem(ModTiers.CITRINE, 1, 1f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_SHOVEL = ITEMS.register("citrine_shovel",
+            () -> new ShovelItem(ModTiers.CITRINE, 0, 1f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_AXE = ITEMS.register("citrine_axe",
+            () -> new AxeItem(ModTiers.CITRINE, 4, 0f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_HOE = ITEMS.register("citrine_hoe",
+            () -> new HoeItem(ModTiers.CITRINE, 0, 0f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_STAFF = ITEMS.register("citrine_staff",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_LEGGINGS = ITEMS.register("citrine_leggings",
+            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_BOOTS = ITEMS.register("citrine_boots",
+            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
+            () -> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).durability(16)));
+
+    public static final RegistryObject<Item> GEM_CUTTER_TOOL = ITEMS.register("gem_cutter_tool",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).durability(32)));
+
+    public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+    public static final RegistryObject<Item> COBALT_NUGGET = ITEMS.register("cobalt_nugget",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> COBALT_SWORD = ITEMS.register("cobalt_sword",
+            () -> new LevitationSwordItem(ModTiers.COBALT, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+    public static final RegistryObject<Item> COBALT_PICKAXE = ITEMS.register("cobalt_pickaxe",
+            () -> new PickaxeItem(ModTiers.COBALT, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+    public static final RegistryObject<Item> COBALT_SHOVEL = ITEMS.register("cobalt_shovel",
+            () -> new ShovelItem(ModTiers.COBALT, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+    public static final RegistryObject<Item> COBALT_AXE = ITEMS.register("cobalt_axe",
+            () -> new AxeItem(ModTiers.COBALT, 4, 0f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+    public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("cobalt_hoe",
+            () -> new HoeItem(ModTiers.COBALT, 0, 0f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> HONEY_BUCKET = ITEMS.register("honey_bucket",
+            () -> new BucketItem(ModFluids.HONEY_FLUID,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).durability(500)));
+
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).food(ModFoods.TURNIP)));
+
+    public static final RegistryObject<Item> CITRINE_HORSE_ARMOR = ITEMS.register("citrine_horse_armor",
+            () -> new HorseArmorItem(12, "citrine",
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> TURNIP_SEEDS = ITEMS.register("turnip_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(),
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<Item> CITRINE_PAXEL = ITEMS.register("citrine_paxel",
+            () -> new PaxelItem(ModTiers.COBALT, 0, 0f,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
 
 

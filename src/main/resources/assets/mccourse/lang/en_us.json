@@ -3,13 +3,75 @@
   "item.mccourse.raw_citrine": "Raw Citrine",
   "item.mccourse.coal_silver": "Coal Siver",
   "item.mccourse.chipped_citrine": "Chipped Citrine",
+  "item.mccourse.citrine_axe": "Citrine Axe",
+  "item.mccourse.citrine_sword": "Citrine Sword",
+  "item.mccourse.citrine_pickaxe": "Citrine Pickaxe",
+  "item.mccourse.citrine_hoe": "Citrine Hoe",
+  "item.mccourse.citrine_shovel": "Citrine Shovel",
+  "item.mccourse.citrine_staff": "Citrine Staff",
+  "item.mccourse.citrine_helmet": "Citrine Helmet",
+  "item.mccourse.citrine_chestplate": "Citrine Chestplate",
+  "item.mccourse.citrine_leggings": "Citrine Leggings",
+  "item.mccourse.citrine_boots": "Citrine Boots",
+  "item.mccourse.dowsing_rod": "Dowsing Rod",
+  "item.mccourse.dowsing_rod.no_valuables": "No Valuables Found!",
+  "item.mccourse.gem_cutter_tool": "Gem Cutter Tool",
+  "item.mccourse.cobalt_ingot": "Cobalt Ingot",
+  "item.mccourse.cobalt_nugget": "Cobalt Nugget",
+  "item.mccourse.cobalt_sword": "Cobalt Sword",
+  "item.mccourse.cobalt_shovel": "Cobalt Shovel",
+  "item.mccourse.cobalt_axe": "Cobalt Axe",
+  "item.mccourse.cobalt_pickaxe": "Cobalt Pickaxe",
+  "item.mccourse.cobalt_hoe": "Cobalt Hoe",
+  "item.mccourse.honey_bucket": "Honey Bucket",
+  "item.mccourse.data_tablet": "Data Tablet",
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+  "item.mccourse.turnip": "Turnip",
+  "item.mccourse.citrine_horse_armor": "Citrine Horse Amor",
+  "item.mccourse.magic_dust": "Magic Dust",
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+  "item.mccourse.citrine_paxel": "Citrine Paxel",
+
 
 
   "block.mccourse.citrine_block": "Citrine Block",
   "block.mccourse.citrine_ore": "Citrine Ore",
   "block.mccourse.deepslate_citrine_ore": "DeepSlate Citrine Ore",
   "block.mccourse.endstone_citrine_ore": "EndStone Citrine Ore",
+  "block.mccourse.citrine_stairs": "Citrine Stairs",
+  "block.mccourse.citrine_slab": "Citrine Slab",
+  "block.mccourse.citrine_button": "Citrine Button",
+  "block.mccourse.citrine_pressure_plate": "Citrine Pressure Plate",
+  "block.mccourse.citrine_fence": "Citrine Fence",
+  "block.mccourse.citrine_fence_gate": "Citrine Fence Gate",
+  "block.mccourse.citrine_wall": "Citrine Wall",
+  "block.mccourse.cherry_blossom_log": "Cherry Blossom Log",
+  "block.mccourse.cherry_blossom_planks": "Cherry Blossom Planks",
+  "block.mccourse.cherry_blossom_wood": "Cherry Blossom Wood",
+  "block.mccourse.stripped_cherry_blossom_log": "Stripped Cherry Blossom Log",
+  "block.mccourse.stripped_cherry_blossom_wood": "Stripped Cherry Blossom Wood",
+  "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
+  "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom TrapDoor",
+  "block.mccourse.gem_cutting_station": "Gem Cutting Station",
+  "block.mccourse.winter_window": "Winter Window",
+  "block.mccourse.magic_amethyst": "Magic Amethyst",
 
 
-  "itemGroup.coursemodtab": "MCCourse Mod"
+
+  "block.mccourse.cobalt_fence": "Cobalt Fence",
+  "block.mccourse.cobalt_fence_gate": "Cobalt Fence Gate",
+  "block.mccourse.cobalt_wall": "Cobalt Wall",
+
+  "item.mccourse.turnip_seeds": "Turnip Seeds",
+  "block.mccourse.turnip_crop": "Turnip Crop",
+
+
+  "effect.mccourse.freeze": "Freeze Effect",
+
+  "itemGroup.coursemodtab": "MCCourse Mod",
+
+  "tooltip.mccourse.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!"
 }
