@@ -120,10 +120,6 @@ public class Moditems {
             () -> new PaxelItem(ModTiers.COBALT, 7, 6f,
                     new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
 
-    public static final RegistryObject<Item> CITRINE_BOW = ITEMS.register("citrine_bow",
-            () -> new BowItem(new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB).durability(500)));
-
-
 
     public static void register (IEventBus eventBus) {
         ITEMS.register(eventBus);
