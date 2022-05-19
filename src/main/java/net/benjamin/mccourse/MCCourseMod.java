@@ -2,6 +2,7 @@ package net.benjamin.mccourse;
 
 import net.benjamin.mccourse.block.ModBlocks;
 import net.benjamin.mccourse.config.MCCourseClientConfigs;
+import net.benjamin.mccourse.config.MCCourseCommonConfigs;
 import net.benjamin.mccourse.effect.ModEffects;
 import net.benjamin.mccourse.enchantment.ModEnchantments;
 import net.benjamin.mccourse.fluid.ModFluids;
@@ -61,6 +62,7 @@ public class MCCourseMod
 
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MCCourseClientConfigs.SPEC, "mccourse-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MCCourseCommonConfigs.SPEC, "mccourse-common.toml");
 
 
 

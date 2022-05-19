@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mccourse:citrine_ore",
+    "mccourse:citrine_block",
+    "mccourse:deepslate_citrine_ore",
+    "mccourse:endstone_citrine_ore"
+  ]
+}
