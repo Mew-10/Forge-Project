@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/stronghold_chest"
+    }
+  ],
+  "addition": "mccourse:data_tablet",
+  "type": "mccourse:data_tablet"
+}

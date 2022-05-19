@@ -6,6 +6,7 @@ import net.benjamin.mccourse.block.custom.ModFlammableRotatedPillarBlock;
 import net.benjamin.mccourse.block.custom.TurnipCropBlock;
 import net.benjamin.mccourse.item.ModCreativeModeTabs;
 import net.benjamin.mccourse.item.Moditems;
+import net.benjamin.mccourse.world.feature.tree.CherryBlossomTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffects;
@@ -127,8 +128,32 @@ public class ModBlocks {
             () -> new TurnipCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
                     .noCollission().noOcclusion()));
 
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_LEAVES = registerBlock("cherry_blossom_leaves",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, ModCreativeModeTabs.MCMOD_TAB);
+
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_SAPLING = registerBlock("cherry_blossom_sapling",
+            () -> new SaplingBlock(new CherryBlossomTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
+            ModCreativeModeTabs.MCMOD_TAB);
 
 
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
+            () -> new FlowerBlock(MobEffects.BLINDNESS, 4,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTabs.MCMOD_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

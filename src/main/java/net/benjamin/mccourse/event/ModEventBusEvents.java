@@ -1,6 +1,7 @@
 package net.benjamin.mccourse.event;
 
 import net.benjamin.mccourse.MCCourseMod;
+import net.benjamin.mccourse.event.loot.DataTabletAdditionModifier;
 import net.benjamin.mccourse.event.loot.DowsingRodInIglooAdditionModifier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -16,8 +17,12 @@ public class ModEventBusEvents {
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>>
                                                            event) {
         event.getRegistry().registerAll(
+                new DataTabletAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(MCCourseMod.MOD_ID,"data_tablet")),
                 new DowsingRodInIglooAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(MCCourseMod.MOD_ID,"dowsing_rod_in_igloo"))
+
+
         );
     }
 
