@@ -1,6 +1,7 @@
 package net.benjamin.mccourse;
 
 import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.config.MCCourseClientConfigs;
 import net.benjamin.mccourse.effect.ModEffects;
 import net.benjamin.mccourse.enchantment.ModEnchantments;
 import net.benjamin.mccourse.fluid.ModFluids;
@@ -20,7 +21,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -51,6 +54,12 @@ public class MCCourseMod
         ModPotions.register(eventbus);
         ModPaintings.register(eventbus);
         ModSounds.register(eventbus);
+
+        eventbus.addListener(this::setup);
+        eventbus.addListener(this::clientSetup);
+
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MCCourseClientConfigs.SPEC, "mccourse-client.toml");
 
 
 
