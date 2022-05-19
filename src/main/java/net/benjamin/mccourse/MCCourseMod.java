@@ -1,40 +1,39 @@
 package net.benjamin.mccourse;
 
 import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.block.entity.ModBlockEntities;
 import net.benjamin.mccourse.config.MCCourseClientConfigs;
 import net.benjamin.mccourse.config.MCCourseCommonConfigs;
 import net.benjamin.mccourse.effect.ModEffects;
 import net.benjamin.mccourse.enchantment.ModEnchantments;
+import net.benjamin.mccourse.entity.ModEntityTypes;
+import net.benjamin.mccourse.entity.client.RaccoonRenderer;
+import net.benjamin.mccourse.entity.client.TigerRenderer;
 import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.painting.ModPaintings;
 import net.benjamin.mccourse.potion.ModPotions;
+import net.benjamin.mccourse.screen.GemCuttingStationScreen;
+import net.benjamin.mccourse.screen.ModMenuTypes;
 import net.benjamin.mccourse.sound.ModSounds;
 import net.benjamin.mccourse.util.ModItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCCourseMod.MOD_ID)
@@ -56,6 +55,9 @@ public class MCCourseMod
         ModPotions.register(eventbus);
         ModPaintings.register(eventbus);
         ModSounds.register(eventbus);
+        ModBlockEntities.register(eventbus);
+        ModMenuTypes.register(eventbus);
+        ModEntityTypes.register(eventbus);
 
         eventbus.addListener(this::setup);
         eventbus.addListener(this::clientSetup);
@@ -85,17 +87,23 @@ public class MCCourseMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
+        MenuScreens.register(ModMenuTypes.GEM_CUTTING_STATION_MENU.get(), GemCuttingStationScreen::new);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
+        EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
+        EntityRenderers.register(ModEntityTypes.TIGER.get(), TigerRenderer::new);
+
 
         ModItemProperties.addCustomItemProperties();
 
 
     }
-    private void setup(final FMLCommonSetupEvent event)
-
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(Moditems.TURNIP_SEEDS.get(), 0.3f);
+            ComposterBlock.COMPOSTABLES.put(Moditems.TURNIP.get(), 0.65f);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
+        });
+    }
     }
 
-}
+

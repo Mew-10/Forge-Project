@@ -1,11 +1,15 @@
 package net.benjamin.mccourse.event;
 
 import net.benjamin.mccourse.MCCourseMod;
+import net.benjamin.mccourse.entity.ModEntityTypes;
+import net.benjamin.mccourse.entity.custom.RaccoonEntity;
+import net.benjamin.mccourse.entity.custom.TigerEntity;
 import net.benjamin.mccourse.event.loot.DataTabletAdditionModifier;
 import net.benjamin.mccourse.event.loot.DowsingRodInIglooAdditionModifier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -25,7 +29,12 @@ public class ModEventBusEvents {
 
         );
     }
+    @SubscribeEvent
+    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+        event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
 
+        event.put(ModEntityTypes.TIGER.get(), TigerEntity.setAttributes());
+    }
 
 
 }

@@ -1,9 +1,7 @@
 package net.benjamin.mccourse.block;
 
 import net.benjamin.mccourse.MCCourseMod;
-import net.benjamin.mccourse.block.custom.GemCuttingStationBlock;
-import net.benjamin.mccourse.block.custom.ModFlammableRotatedPillarBlock;
-import net.benjamin.mccourse.block.custom.TurnipCropBlock;
+import net.benjamin.mccourse.block.custom.*;
 import net.benjamin.mccourse.item.ModCreativeModeTabs;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.world.feature.tree.CherryBlossomTreeGrower;
@@ -154,6 +152,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
             () -> new FlowerBlock(MobEffects.BLINDNESS, 4,
                     BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTabs.MCMOD_TAB);
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose",
+            () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

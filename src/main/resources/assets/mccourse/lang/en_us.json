@@ -34,6 +34,9 @@
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
   "item.mccourse.citrine_paxel": "Citrine Paxel",
 
+  "item.mccourse.raccoon_spawn_egg": "Raccoon Spawn Egg",
+  "item.mccourse.tiger_spawn_egg": "Tiger Spawn Egg",
+
 
 
   "block.mccourse.citrine_block": "Citrine Block",
@@ -60,12 +63,14 @@
   "block.mccourse.cherry_blossom_leaves": "Cherry Blossom Leaves",
   "block.mccourse.cherry_blossom_sapling": "Cherry Blossom Sapling",
   "block.mccourse.pink_rose": "Pink Rose",
+  "block.mccourse.potted_pink_rose": "Potted Pink Rose",
 
 
 
   "block.mccourse.cobalt_fence": "Cobalt Fence",
   "block.mccourse.cobalt_fence_gate": "Cobalt Fence Gate",
   "block.mccourse.cobalt_wall": "Cobalt Wall",
+
 
   "item.mccourse.turnip_seeds": "Turnip Seeds",
   "block.mccourse.turnip_crop": "Turnip Crop",

@@ -2,6 +2,7 @@ package net.benjamin.mccourse.item;
 
 import net.benjamin.mccourse.MCCourseMod;
 import net.benjamin.mccourse.block.ModBlocks;
+import net.benjamin.mccourse.entity.ModEntityTypes;
 import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -119,6 +120,15 @@ public class Moditems {
     public static final RegistryObject<Item> CITRINE_PAXEL = ITEMS.register("citrine_paxel",
             () -> new PaxelItem(ModTiers.COBALT, 7, 6f,
                     new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> RACCOON_SPAWN_EGG = ITEMS.register("raccoon_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.RACCOON,0x948e8d, 0x3b3635,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> TIGER_SPAWN_EGG = ITEMS.register("tiger_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.TIGER,0xfcb603, 0x242321,
+                    new Item.Properties().tab(ModCreativeModeTabs.MCMOD_TAB)));
+
 
 
     public static void register (IEventBus eventBus) {
