@@ -129,7 +129,7 @@ public class ModBlocks {
                     .noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> CHERRY_BLOSSOM_LEAVES = registerBlock("cherry_blossom_leaves",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noOcclusion()) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
                     return true;
@@ -147,7 +147,7 @@ public class ModBlocks {
             }, ModCreativeModeTabs.MCMOD_TAB);
 
     public static final RegistryObject<Block> CHERRY_BLOSSOM_SAPLING = registerBlock("cherry_blossom_sapling",
-            () -> new SaplingBlock(new CherryBlossomTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
+            () -> new SaplingBlock(new CherryBlossomTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()),
             ModCreativeModeTabs.MCMOD_TAB);
 
 
