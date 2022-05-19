@@ -7,6 +7,7 @@ import net.benjamin.mccourse.fluid.ModFluids;
 import net.benjamin.mccourse.item.Moditems;
 import net.benjamin.mccourse.painting.ModPaintings;
 import net.benjamin.mccourse.potion.ModPotions;
+import net.benjamin.mccourse.sound.ModSounds;
 import net.benjamin.mccourse.util.ModItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -49,6 +50,7 @@ public class MCCourseMod
         ModEffects.register(eventbus);
         ModPotions.register(eventbus);
         ModPaintings.register(eventbus);
+        ModSounds.register(eventbus);
 
 
 
