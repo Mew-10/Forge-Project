@@ -2,6 +2,7 @@ package net.benjamin.mccourse.event;
 import net.benjamin.mccourse.MCCourseMod;
 import net.benjamin.mccourse.command.ReturnHomeCommand;
 import net.benjamin.mccourse.command.SetHomeCommand;
+import net.benjamin.mccourse.config.MCCourseClientConfigs;
 import net.benjamin.mccourse.util.KaupenTitleScreen;
 import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,8 +36,9 @@ public class ModEvents {
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void openGui(ScreenOpenEvent event) {
-        if (event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof KaupenTitleScreen)) {
+        if (MCCourseClientConfigs.CUSTOM_TITLE_SCREEN.get() &&
+                event.getScreen() instanceof TitleScreen && !(event.getScreen() instanceof KaupenTitleScreen)) {
             event.setScreen(new KaupenTitleScreen());
         }
     }
-}
+        }
