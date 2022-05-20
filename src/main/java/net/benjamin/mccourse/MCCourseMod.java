@@ -18,6 +18,7 @@ import net.benjamin.mccourse.screen.ModMenuTypes;
 import net.benjamin.mccourse.sound.ModSounds;
 import net.benjamin.mccourse.util.ModItemProperties;
 import net.benjamin.mccourse.villager.ModVillagers;
+import net.benjamin.mccourse.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -61,6 +62,7 @@ public class MCCourseMod
         ModMenuTypes.register(eventbus);
         ModEntityTypes.register(eventbus);
         ModVillagers.register(eventbus);
+        ModStructures.register(eventbus);
 
 
         GeckoLib.initialize();
