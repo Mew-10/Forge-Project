@@ -17,6 +17,7 @@ import net.benjamin.mccourse.screen.GemCuttingStationScreen;
 import net.benjamin.mccourse.screen.ModMenuTypes;
 import net.benjamin.mccourse.sound.ModSounds;
 import net.benjamin.mccourse.util.ModItemProperties;
+import net.benjamin.mccourse.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -34,6 +35,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCCourseMod.MOD_ID)
@@ -58,6 +60,10 @@ public class MCCourseMod
         ModBlockEntities.register(eventbus);
         ModMenuTypes.register(eventbus);
         ModEntityTypes.register(eventbus);
+        ModVillagers.register(eventbus);
+
+
+        GeckoLib.initialize();
 
         eventbus.addListener(this::setup);
         eventbus.addListener(this::clientSetup);
@@ -102,6 +108,7 @@ public class MCCourseMod
             ComposterBlock.COMPOSTABLES.put(Moditems.TURNIP_SEEDS.get(), 0.3f);
             ComposterBlock.COMPOSTABLES.put(Moditems.TURNIP.get(), 0.65f);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE);
+            ModVillagers.registerPOIs();
         });
     }
     }

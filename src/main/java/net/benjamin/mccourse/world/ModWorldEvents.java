@@ -1,5 +1,6 @@
 package net.benjamin.mccourse.world;
 import net.benjamin.mccourse.MCCourseMod;
+import net.benjamin.mccourse.world.gen.ModEntityGeneration;
 import net.benjamin.mccourse.world.gen.ModFlowerGeneration;
 import net.benjamin.mccourse.world.gen.ModOreGeneration;
 import net.benjamin.mccourse.world.gen.ModTreeGeneration;
@@ -13,5 +14,7 @@ public class ModWorldEvents {
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModOreGeneration.generateOres(event);
         ModTreeGeneration.generateTrees(event);
-        ModFlowerGeneration.generateFlowers(event);}
+        ModFlowerGeneration.generateFlowers(event);
+        ModEntityGeneration.onEntitySpawn(event);
+    }
 }

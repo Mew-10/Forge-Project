@@ -7,6 +7,7 @@ import net.benjamin.mccourse.entity.custom.TigerEntity;
 import net.benjamin.mccourse.event.loot.DataTabletAdditionModifier;
 import net.benjamin.mccourse.event.loot.DowsingRodInIglooAdditionModifier;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -32,9 +33,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
-
         event.put(ModEntityTypes.TIGER.get(), TigerEntity.setAttributes());
     }
-
-
-}
+    }
